@@ -1,0 +1,41 @@
+==========================================          ==========================================
+             TMUX COMMAND                                        WINDOW (TAB)
+==========================================          ==========================================
+
+List    tmux ls                                     List         ^a w
+New          new -s <session>                       Create       ^a c
+Attach       att -t <session>                       Rename       ^a , <name>
+Rename       rename-session -t <old> <new>          Close        ^a &
+Kill         kill-session -t <session>              
+                                                    Goto #       ^a <0-9>
+==========================================          Next         ^a n
+             CONTROLS                               Previous     ^a p
+==========================================          Last         ^a l               (lower-L)
+                                                    Choose       ^a w <name>
+List         ^a s                                   
+Buffer       ^a <PgUpDn>                            ==========================================
+Command      ^a : <command>                                      PANE (SPLIT WINDOW)
+                                                    ==========================================
+Copy         ^a [ ... <space> ... <enter>           
+ Moving         vim/emacs key bindings              Show #       ^a q
+ Start          <space>                             Split Horiz  ^a "                   -
+ Copy           <enter>                             Split Vert   ^a %                   |
+Paste        ^a ]                                   Pane->Window ^a !
+                                                    Kill         ^a x
+==========================================          
+             SESSION (Set of Windows)               Reorganize   ^a <space>
+==========================================          Expand       ^a <alt><arrow>
+                                                    Resize       ^a ^<arrow>                                                    
+New          ^a :new     ^a :new -s <name>          Resize x n   ^a <n> <arrow>
+Detach       ^a d
+Rename       ^a $                                   Select       ^a <arrow>         <alt><arrow>
+List         ^a s                                   Switch       ^a o                  other
+Next         ^a (                                   Last         ^a ;
+Previous     ^a )                                   Swap left    ^a {
+                                                    Swap right   ^a }
+                                                    Rotate       ^a ^o
+                                                    Zoom         ^a z
+
+ 			
+			
+                              <www.tmuxcheatsheet.com>

@@ -1,0 +1,74 @@
+==========================================          
+             TMUX COMMAND                           
+==========================================          
+
+List    tmux ls                                     
+New          new -s <session>                       
+Attach       att -t <session>                       
+Rename       rename-session -t <old> <new>          
+Kill         kill-session -t <session>              
+
+==========================================          
+             CONTROLS                               
+==========================================          
+                                                    
+List         ^a s                                   
+Buffer       ^a <PgUpDn>                            
+Command      ^a : <command>                         
+
+Copy         ^a [ ... <space> ... <enter>           
+ Moving         vim/emacs key bindings              
+ Start          <space>                             
+ Copy           <enter>                             
+Paste        ^a ]                                   
+
+==========================================          
+             SESSION (Set of Windows)               
+==========================================          
+                                                    
+New          ^a :new     ^a :new -s <name>
+Detach       ^a d
+Rename       ^a $                                   
+List         ^a s                                   
+Next         ^a (                                   
+Previous     ^a )                                   
+                                                    
+==========================================
+             WINDOW (TAB)
+==========================================
+                                          
+List         ^a w
+Create       ^a c
+Rename       ^a , <name>
+Close        ^a &
+                                          
+Goto #       ^a <0-9>
+Next         ^a n
+Previous     ^a p
+Last         ^a l               (lower-L)
+Choose       ^a w <name>
+                                          
+==========================================
+             PANE (SPLIT WINDOW)
+==========================================
+                                          
+Show #       ^a q
+Split Horiz  ^a "                   -
+Split Vert   ^a %                   |
+Pane->Window ^a !
+Kill         ^a x
+                                          
+Reorganize   ^a <space>
+Expand       ^a <alt><arrow>
+Resize       ^a ^<arrow>
+Resize x n   ^a <n> <arrow>
+                                          
+Select       ^a <arrow>         <alt><arrow>
+Switch       ^a o                  other
+Last         ^a ;
+
+Swap left    ^a {
+Swap right   ^a }
+Rotate       ^a ^o
+
+Zoom         ^a z
