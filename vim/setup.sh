@@ -12,6 +12,8 @@ fi
 # Sets up .vimrc so it will be found by vim
 ln .vimrc $RC
 
+ln -s . ~/.vim
+
 # Checks if exuberant ctags are installed
 command -v dpkg >/dev/null 2>&1 || \
 { echo >&2 "${RED}Unable to verify existance of packages. Aborting"; exit 1; }

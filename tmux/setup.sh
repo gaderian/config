@@ -1,6 +1,6 @@
 #!/bin/bash
 #Created 2017-04
-CONF=~/.tmux.config
+CONF=~/.tmux.conf
 
 
 if [ -f $CONF ]; then
