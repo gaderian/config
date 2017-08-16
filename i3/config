@@ -183,9 +183,6 @@ workspace 8 output $secondMonitor
 workspace 9 output $secondMonitor
 workspace 10 output $secondMonitor
 
-# swap ctrl with caps lock on keyboard (because emacs) ---> not working :(
-setxkbmap -layout gb -option ctrl:nocaps
-
 # for screenlock
 bindsym $mod+l exec xtrlock -b
 
@@ -214,10 +211,6 @@ bindsym Print exec "scrot -u '%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/screensh
 
 # For taking screenshot of selected area
 bindsym --release Shift+Print exec "scrot -s '%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/screenshots/'"
-
-# For taking screenshot of selected area and puting it in the clipboard
-#bindsym --release Control+Shift+Print exec "scrot -s 'scrot_tmp.png' && xclip -selection CLIPBOARD scrot_tmp.png"
-# && rm -f scrot_tmp.png"
 
 for_window [class="com.cinnober.lmeclear.tradegt.TradeGT"] floating enable
 for_window [class="Xmessage"] floating enable
