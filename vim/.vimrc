@@ -4,8 +4,12 @@ syntax on
 "set shiftwidth=4
 "set tabstop=4
 "set expandtab
+"set mouse=a
 filetype plugin indent on
-set mouse=a
+
+"indentation per file
+autocmd Filetype markdown setlocal ts=4 sts=4 sw=4
+autocmd Filetype .wiki setlocal ts=4 sts=4 sw=4
 
 set wrap lbr
 
@@ -34,7 +38,7 @@ if exists('+colorcolumn')
 endif
 
 " Wraps/unwraps
-noremap <silent> <Leader>w :call ToggleWrap()<CR>
+"noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
   if &wrap
     echo "Wrap OFF"
@@ -96,3 +100,10 @@ augroup END
 
 "pathogen
 execute pathogen#infect()
+
+"vimwiki
+let wiki_1 = {}
+let wiki_1.path = '~/private/vimwiki/'
+let wiki_1.path_html = '~/private/vimwiki_html/'
+
+let g:vimwiki_list = [wiki_1]
