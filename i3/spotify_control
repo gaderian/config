@@ -1,0 +1,33 @@
+#!/bin/sh
+
+usage() {
+    >&2 echo "usage: $0 {playpause|next|prev}"
+}
+
+if [ $# -ne 1 ]; then
+    usage
+    exit 1
+fi
+
+case $1 in
+    help)
+        usage;;
+    playpause)
+        cmd="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+        >&2 echo "$cmd"
+        $cmd
+        ;;
+    next)
+        cmd="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+        >&2 echo "$cmd"
+        $cmd
+        ;;
+    prev)
+        cmd="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+        >&2 echo "$cmd"
+        $cmd
+        ;;
+    *)
+        usage
+        exit 1
+esac

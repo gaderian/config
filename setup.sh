@@ -6,3 +6,6 @@ cd vim
 
 cd ../tmux
 ./setup.sh
+
+cd ../i3
+./setup.sh
