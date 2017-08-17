@@ -218,4 +218,4 @@ for_window [class="Xmessage"] floating enable
 # Spotify control
 bindsym $mod+p exec spotify_control playpause
 bindsym $mod+n exec spotify_control next
-bindsym $mod+b exec spotify_control back
+bindsym $mod+b exec spotify_control prev
