@@ -12,7 +12,7 @@ fi
 # Sets up .vimrc so it will be found by vim
 ln .vimrc $RC
 
-ln -s . ~/.vim
+ln -s $(pwd) ~/.vim
 
 # Checks if exuberant ctags are installed
 command -v dpkg >/dev/null 2>&1 || \

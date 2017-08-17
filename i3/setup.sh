@@ -6,5 +6,5 @@ NC='\033[0m'
 
 I3=~/.i3
 
-ln -s . $I3
+ln -s $(pwd) $I3
 ln spotify_control ~/bin/spotify_control
