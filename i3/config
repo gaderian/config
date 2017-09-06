@@ -215,6 +215,11 @@ bindsym --release Shift+Print exec "scrot -s '%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/P
 for_window [class="com.cinnober.lmeclear.tradegt.TradeGT"] floating enable
 for_window [class="Xmessage"] floating enable
 
+# Making eclipse behave... almost
+for_window [class="Eclipse"] floating disable
+for_window [class="Eclipse" title=".+"] floating enable 
+for_window [class="Eclipse" title="^workspace.*"] floating disable
+
 # Spotify control
 bindsym $mod+p exec spotify_control playpause
 bindsym $mod+n exec spotify_control next
