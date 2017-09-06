@@ -1,15 +1,21 @@
 set nu
 "colorscheme evening
 syntax on
-"set shiftwidth=4
-"set tabstop=4
-"set expandtab
+set shiftwidth=4
+set tabstop=4
+set expandtab
 "set mouse=a
 filetype plugin indent on
 
 "indentation per file
 autocmd Filetype markdown setlocal ts=4 sts=4 sw=4
 autocmd Filetype .wiki setlocal ts=4 sts=4 sw=4
+
+"Navigate splits
+nnoremap <C-H> <C-W><C-H> 
+nnoremap <C-J> <C-W><C-J> 
+nnoremap <C-K> <C-W><C-K> 
+nnoremap <C-L> <C-W><C-L> 
 
 set wrap lbr
 
